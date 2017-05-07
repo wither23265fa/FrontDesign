@@ -1,0 +1,48 @@
+/*Global*/
+.body {
+  min-width: 400px;
+}
+
+/*Login*/
+
+.mdl-card {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sign-info {
+  color: #00BCD4;
+  font-size: 120%;
+}
+
+#btnSignUp, #btnSignIn {
+  float: right;
+  margin-left: 1rem;
+}
+
+.mdl-button--raised:hover {
+  background-color: rgba(158, 158, 158, 0.54);
+}
+
+.mdl-button--raised:active {
+  background-color: rgba(158, 158, 158, 0.9);
+}
+
+/*Login*/
+
+/*update*/
+
+#menu_title {
+  margin-left: 15%;
+}
+
+.mdl-layout__container {
+  position: inherit;
+}
+
+#btnSubmit {
+  float: right;
+}
+
+/*update*/
