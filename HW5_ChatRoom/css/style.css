@@ -1,7 +1,9 @@
 /*Global*/
+
 .body {
   min-width: 400px;
 }
+
 
 /*Login*/
 
@@ -29,7 +31,9 @@
   background-color: rgba(158, 158, 158, 0.9);
 }
 
+
 /*Login*/
+
 
 /*update*/
 
@@ -45,4 +49,42 @@
   float: right;
 }
 
+#photo {
+  padding-top: 0px;
+}
+
+
 /*update*/
+
+
+/*profile*/
+
+#user-pic {
+  padding: 0 25%;
+  /*width: 72px;*/
+  box-sizing: border-box;
+}
+
+.demo-avatar {
+  width: 120px;
+  height: 120px;
+  /*padding: 0px;*/
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding-left: 20px;
+}
+
+ul li {
+  font-family: Roboto;
+  font-size: 120%;
+  font-weight: 300;
+  margin-bottom: 8px;
+  line-height: 24px;
+
+}
+
+
+/*profile*/
