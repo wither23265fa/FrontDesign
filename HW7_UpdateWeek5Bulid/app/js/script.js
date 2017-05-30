@@ -3,6 +3,7 @@ $(document).ready(function() {
 		var $content = $(".navbar-collapse");
 
 		if($content.hasClass("collapse")) {
+			console.log("has that");
 			$content.slideDown();
 			$content.removeClass("collapse");
 		}
