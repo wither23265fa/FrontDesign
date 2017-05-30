@@ -1,0 +1,178 @@
+@charset "UTF-8";
+@import "normalize.css";
+@import "breakPoint.css";
+$white: #FFF;
+
+/* global style */
+
+.container {
+  margin: 0 2.5%;
+  box-sizing: border-box;
+  display: block;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(0, 17, 27);
+}
+
+* {
+  font-family: sans-serif;
+  color: $white;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+/* global style */
+
+
+/* header style */
+
+header {
+  padding: 30px 0 20px 0;
+}
+
+#logo {
+  width: 264px;
+  height: 116px;
+}
+
+nav {
+  padding-top: 25px;
+  float: right;
+  display: block;
+}
+
+.title {
+  display: inline-block;
+  a {
+    font-size: 28px;
+    font-family: sans-serif;
+    color: $white;
+    padding-top: 10px;
+    padding-right: 50px;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.1);
+    text-decoration: none;
+    transition: font-size 1s, line-height 1.5s;
+  }
+  a:hover {
+    font-size: 32px;
+    line-height: 24px;
+  }
+  input {
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 10px;
+    border-width: 2px;
+    padding-bottom: 2px;
+    padding: 5px;
+    line-height: 95%;
+    vertical-align: super;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+  }
+}
+
+
+/* header style */
+
+
+/* main style */
+
+#cover-photo {
+  max-width: 1200px;
+  width: 100%;
+  overflow: auto;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 24px 0;
+  text-decoration: underline;
+  box-sizing: border-box;
+  /*animation-name: slide;
+    animation-duration: 2s;*/
+}
+
+.introduce {
+  margin: 0 20px;
+  text-align: center;
+  display: inline-block;
+  &__click {
+    width: 48px;
+    height: 48px;
+    margin-left: 60px;
+    margin-top: 80px;
+    vertical-align: super;
+  }
+
+  &__show {
+    width: 240px;
+    height: 240px;
+    margin-left: 20%;
+    box-sizing: border-box;
+  }
+
+  &__show:hover {
+    -webkit-transform: scale(-1, 1);
+    transition: all 1.2s;
+  }
+
+  &__word {
+    width: 240px;
+    height: auto;
+    padding: 0;
+    display: inline-block;
+    margin: 15px 30px 0px 50px;
+    float: left;
+  }
+}
+
+
+/* main style */
+
+
+/* footer style */
+
+footer {
+  width: 100%;
+  background: rgb(0, 64, 104);
+  padding: 1px 0;
+  margin-top: 50px;
+  text-align: center;
+  /*幫img置中*/
+}
+
+footer p {
+  color: #FFF;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin: 7px 0;
+}
+
+.social img {
+  width: 72px;
+  height: 48px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+
+#special {
+  padding-left: 15px;
+}
+
+
+/* footer style */
