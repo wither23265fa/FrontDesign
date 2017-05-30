@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$(".navbar-toggle").click(function() {
-		var $content = $(".introduce__click");
+		var $content = $(".navbar-collapse");
 
 		if($content.hasClass("collapse")) {
 			$content.slideDown();
