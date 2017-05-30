@@ -357,12 +357,12 @@ template {
   display: none;
 }
 @define-mixin atSmall {
-  @media (mix-width: 530px){
+  @media (mix-width: 768px){
     @mixin-content;
   }
 }
 @define-mixin atMedium {
-  @media (mix-width: 800px){
+  @media (mix-width: 992px){
     @mixin-content;
   }
 }
@@ -373,7 +373,7 @@ template {
 }
 /* global style */
 .container {
-  margin: 0 2.5%;
+  margin: 12.5px 2.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -397,13 +397,24 @@ header {
   padding: 30px 0 20px 0;
 }
 #logo {
-  width: 264px;
-  height: 116px;
+  float: left;
+
+  @mixin atLarge {
+    width: 264px;
+    height: 116px;
+  }
+
+  @mixin atSmall {
+    width: 132px;
+    height: 56px;
+  }
+
 }
-nav {
-  padding-top: 25px;
+.navbar-custom {
+  background-color: rgb(0, 17, 27);
+}
+#navbar-hamburger {
   float: right;
-  display: block;
 }
 .title {
   display: inline-block;
@@ -443,7 +454,7 @@ nav {
 /* main style */
 #cover-photo {
   max-width: 1200px;
-  width: 100%;
+  width: 95%;
   overflow: auto;
 }
 h1 {
