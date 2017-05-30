@@ -373,7 +373,7 @@ template {
 }
 /* global style */
 .container {
-  margin: 12.5px 2.5%;
+  margin: 0 2.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -394,7 +394,7 @@ body {
 /* global style */
 /* header style */
 header {
-  padding: 30px 0 20px 0;
+
 }
 #logo {
   float: left;
@@ -410,10 +410,16 @@ header {
   }
 
 }
+.navbar {
+  padding: 30px 0 20px 0;
+  float: right;
+  display: block;
+}
 .navbar-custom {
   background-color: rgb(0, 17, 27);
 }
 #navbar-hamburger {
+  margin-top: 30px;
   float: right;
 }
 .title {
@@ -500,6 +506,24 @@ h1 {
     margin: 15px 30px 0px 50px;
     float: left;
   }
+@media (max-width: 530px) {
+    .introduce__click {
+      display: none;
+    }
+    .introduce__show {
+      margin: 30px 7px;
+      width: 120px;
+      height: 120px;
+      float: left;
+    }
+
+    .introduce__word{
+      margin: 20px 0 0 0;
+      width: 120px;
+      font-size: 12px;
+      float: right;
+    }
+}
 /* main style */
 /* footer style */
 footer {
