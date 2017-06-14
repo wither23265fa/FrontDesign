@@ -44,14 +44,12 @@ header {
 
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   #logo {
     width: 132px;
     height: 56px;
   }
 }
-
-
 
 .navbar {
   padding: 30px 0 20px 0;
@@ -159,7 +157,7 @@ h1 {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
 
   #cover-photo {
     margin-top: 120px;

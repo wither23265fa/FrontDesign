@@ -47,15 +47,15 @@
           <div class="col-lg-1">
             <a href="#"><img src="./img/left_arrow.png" alt="left_arrow" class="introduce__click"></a>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-sm-12">
             <a href="#"><img src="./img/actor.jpg" alt="actor" class="introduce__show"></a>
             <p class="introduce__word">Diesel further hinted at an eighth film on Jimmy Kimmel Live! when he stated that Kurt Russell's character had been introduced in a role that would span multiple films.He also stated that the film would take place in New York.</p>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-sm-12">
             <a href="#"><img src="./img/car.jpg" alt="car" class="introduce__show"></a>
             <p class="introduce__word">Take a look at our selections for the best sports cars of 2017 and 2018; if it's sporting an Editors' Choice badge, you'll know that we think it's one of the best sports cars on the market.</p>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-sm-12">
             <a href="#"><img src="./img/story.jpg" alt="story" class="introduce__show"></a>
             <p class="introduce__word">The Fast and the Furious is an American franchise based on a series of action films, the damage done onscreen through the stunts of the franchise would total more than $514 million across the first seven films.</p>
           </div>
@@ -68,6 +68,27 @@
     </div>
     <!-- end main div-->
   </main>
+  <!-- fb -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1966131870300579',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v2.8'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- fb -->
 </body>
 <footer>
   <p>Follow us</p>
