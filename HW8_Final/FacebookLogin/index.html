@@ -13,6 +13,15 @@
 
   <div id="fb-root"></div>
   <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1966131870300579',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v2.8'
+      });
+      FB.AppEvents.logPageView();
+    };
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
@@ -22,6 +31,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
+  
   <h2>Facebook</h2>
   <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
   <div id="UserInfo">
@@ -45,8 +55,7 @@
         <button type="submit">Login</button>
         <input type="checkbox" checked="checked"> Remember me
       </div>
-      <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="false" data-use-continue-as="true">
-        content
+      <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true">
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
