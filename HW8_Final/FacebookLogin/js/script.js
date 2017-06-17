@@ -12,7 +12,6 @@ $(document).ready(function() {
 
 		FB.getLoginStatus(function(response) {
     	statusChangeCallback(response);
-
   	});
 	};
 
@@ -38,6 +37,9 @@ $(document).ready(function() {
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       printInfo(response);
+			document.getElementsByClassName('cancelbtn').style.display = "none";
+			document.getElementsByClassName('')
+
     } else {
       // The person is not logged into your app or we are unable to tell.
       document.getElementById('UserInfo').innerHTML = 'Please log ' +
@@ -52,12 +54,16 @@ $(document).ready(function() {
 		var txt1 = $("<p></p>").text(response.authResponse.userID);
 		var txt2 = $("<p></p>").text(response.authResponse);
 		var txt3 = $("<p></p>").text(response.status);
-		$userInfo.append(txt1, tx2, tx3);
+		$userInfo.append(txt1, txt2, txt3);
 	};
+
+	FB.getLoginStatus(function(response) {
+		statusChangeCallback(response);
+	});
 
 	// Get the modal
 	var modal = document.getElementById('id01');
-
+	var logOutBtn = document.getElementById('LogoutBtn');
 	// const $userInfo = $('.UserInfo');
 	// var userInfo = document.getElementsByClassName('UserInfo');
 	const $userInfo = $('#UserInfo');
@@ -67,6 +73,11 @@ $(document).ready(function() {
 		if (event.target == modal) {
 			modal.style.display = "none";
 		}
+	};
+
+	logOutBtn.onclick = function () {
+		// FB
+		console.log("ready to logout");
 	};
 
 });
