@@ -9,25 +9,44 @@
   <script type="text/javascript" src="./js/jQuery.js"></script>
   <script type="text/javascript" src="./js/script.js"></script>
 </head>
-<body>
 
-  <div id="fb-root"></div>
+<body>
   <script>
     window.fbAsyncInit = function() {
       FB.init({
-        appId      : '1966131870300579',
-        cookie     : true,
-        xfbml      : true,
-        version    : 'v2.8'
+        appId: '1966131870300579',
+        cookie: true,
+        xfbml: true,
+        version: 'v2.8'
       });
       FB.AppEvents.logPageView();
     };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+      console.log(response.status);
+    });
+  </script>
+
+  <div id="fb-root"></div>
+  <script>
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s);
       js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=1966131870300579";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
@@ -45,12 +64,6 @@
       }
     };
 
-
-
-    // var text = $("<h2></h2>").text("123");
-    // var txt2 = $("<p></p>").text("Text.");
-
-
     // userInfo.append(text);
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
@@ -63,7 +76,6 @@
         $userInfo.append("none");
       }
     });
-
   </script>
 
   <h2>Facebook</h2>
