@@ -1,18 +1,3 @@
-$(document).ready(function() {
-// Get the modal
-var modal = document.getElementById('id01');
-
-// const $userInfo = $('.UserInfo');
-// var userInfo = document.getElementsByClassName('UserInfo');
-const $userInfo = $('#UserInfo');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-	if (event.target == modal) {
-		modal.style.display = "none";
-	}
-};
-
 window.fbAsyncInit = function() {
 	FB.init({
 		appId      : '1966131870300579',
@@ -30,6 +15,23 @@ window.fbAsyncInit = function() {
   js.src = "//connect.facebook.net/en_US/sdk.js";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+$(document).ready(function() {
+// Get the modal
+var modal = document.getElementById('id01');
+
+// const $userInfo = $('.UserInfo');
+// var userInfo = document.getElementsByClassName('UserInfo');
+const $userInfo = $('#UserInfo');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+};
+
+
 
 // var text = $("<h2></h2>").text("123");
 // var txt2 = $("<p></p>").text("Text.");
