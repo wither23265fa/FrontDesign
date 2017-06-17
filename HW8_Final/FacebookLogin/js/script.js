@@ -38,7 +38,7 @@ $(document).ready(function() {
     if (response.status === 'connected') {
 
 			// Logged into your app and Facebook.
-      testAPI();
+      printInfo(response);
     } else {
       // The person is not logged into your app or we are unable to tell.
       document.getElementById('UserInfo').innerHTML = 'Please log ' +
@@ -48,7 +48,7 @@ $(document).ready(function() {
 
 	function printInfo(response){
 		console.log(response.status);
-		console.log(response.authResponse.userID);
+		console.log("userIDByFacebook = "response.authResponse.userID);
 		UserInfo.innerHTML = response.status;
 	}
 
