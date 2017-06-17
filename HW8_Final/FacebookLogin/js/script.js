@@ -1,11 +1,12 @@
 $(document).ready(function() {
 	window.fbAsyncInit = function() {
 		FB.init({
-			appId: '{1966131870300579}',
-			cookie: true,
-			xfbml: true,
-			version: 'v2.8'
-		});
+      appId      : '1966131870300579',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+
 		FB.AppEvents.logPageView();
 
 		FB.getLoginStatus(function(response) {
@@ -25,6 +26,8 @@ $(document).ready(function() {
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 
+	var UserInfo = document.getElementById('UserInfo');
+
 	function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -33,7 +36,8 @@ $(document).ready(function() {
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
-      // Logged into your app and Facebook.
+
+			// Logged into your app and Facebook.
       testAPI();
     } else {
       // The person is not logged into your app or we are unable to tell.
