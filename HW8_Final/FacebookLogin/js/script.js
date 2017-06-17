@@ -46,6 +46,12 @@ $(document).ready(function() {
     }
   }
 
+	function printInfo(response){
+		console.log(response.status);
+		console.log(response.authResponse.userID);
+		UserInfo.innerHTML = response.status;
+	}
+
 
 	// FB.getLoginStatus(function(response) {
 	// 	statusChangeCallback(response);
