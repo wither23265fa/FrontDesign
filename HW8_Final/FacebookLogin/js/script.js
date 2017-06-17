@@ -36,8 +36,6 @@ $(document).ready(function() {
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
-
-			// Logged into your app and Facebook.
       printInfo(response);
     } else {
       // The person is not logged into your app or we are unable to tell.
@@ -49,8 +47,14 @@ $(document).ready(function() {
 	function printInfo(response){
 		console.log(response.status);
 		console.log("userIDByFacebook = "response.authResponse.userID);
-		UserInfo.innerHTML = response.status;
+		// UserInfo.innerHTML = response.status;
+		var txt1 = $("<p></p>").text(response.authResponse.userID);
+		var txt2 = $("<p></p>").text(response.authResponse);
+		var txt3 = $("<p></p>").text(response.status);
+		$userInfo.append(txt1, tx2, tx3);
 	}
+
+
 
 
 	// FB.getLoginStatus(function(response) {
@@ -76,10 +80,7 @@ $(document).ready(function() {
 	// 	statusChangeCallback(response);
 	//
 	// 	if (response.status == 'connected') { // 登入成功
-	// 		var txt1 = $("<p></p>").text(response.authResponse.userID);
-	// 		var txt2 = $("<p></p>").text(response.authResponse);
-	// 		var txt3 = $("<p></p>").text(response.status);
-	// 		$userInfo.append(txt1, tx2, tx3);
+
 	// 	} else {
 	// 		var txt2 = $("<p></p>").text("none");
 	// 		$userInfo.append("none");
