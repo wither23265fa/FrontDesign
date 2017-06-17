@@ -9,30 +9,19 @@
   <script type="text/javascript" src="./js/jQuery.js"></script>
   <script type="text/javascript" src="./js/script.js"></script>
 </head>
-
-
 <body>
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId: '1966131870300579',
-        cookie: true,
-        xfbml: true,
-        version: 'v2.8'
-      });
-      FB.AppEvents.logPageView();
-    };
 
+  <div id="fb-root"></div>
+  <script>
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s);
       js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
+      js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9&appId=1966131870300579";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
-  <div id="fb-root"></div>
   <h2>Facebook</h2>
   <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
   <div id="UserInfo">
