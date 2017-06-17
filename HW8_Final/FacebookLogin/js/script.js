@@ -42,7 +42,7 @@ $(document).ready(function() {
       document.getElementById('UserInfo').innerHTML = 'Please log ' +
         'into this app.';
     }
-  }
+  };
 
 	function printInfo(response){
 		console.log(response.status);
