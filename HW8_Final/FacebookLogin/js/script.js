@@ -7,6 +7,10 @@ $(document).ready(function() {
 			version: 'v2.8'
 		});
 		FB.AppEvents.logPageView();
+
+		FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  	});
 	};
 
 	(function(d, s, id) {
@@ -38,18 +42,18 @@ $(document).ready(function() {
 			modal.style.display = "none";
 		}
 	};
-
-	FB.getLoginStatus(function(response) {
-		statusChangeCallback(response);
-
-		if (response.status == 'connected') { // 登入成功
-			var txt1 = $("<p></p>").text(response.authResponse.userID);
-			var txt2 = $("<p></p>").text(response.authResponse);
-			var txt3 = $("<p></p>").text(response.status);
-			$userInfo.append(txt1, tx2, tx3);
-		} else {
-			var txt2 = $("<p></p>").text("none");
-			$userInfo.append("none");
-		}
-	});
+	// 
+	// FB.getLoginStatus(function(response) {
+	// 	statusChangeCallback(response);
+	//
+	// 	if (response.status == 'connected') { // 登入成功
+	// 		var txt1 = $("<p></p>").text(response.authResponse.userID);
+	// 		var txt2 = $("<p></p>").text(response.authResponse);
+	// 		var txt3 = $("<p></p>").text(response.status);
+	// 		$userInfo.append(txt1, tx2, tx3);
+	// 	} else {
+	// 		var txt2 = $("<p></p>").text("none");
+	// 		$userInfo.append("none");
+	// 	}
+	// });
 });
