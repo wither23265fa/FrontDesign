@@ -1,3 +1,6 @@
+// FB tester
+const $userInfo = $('#UserInfo');
+
 $(document).ready(function() {
 
 	window.fbAsyncInit = function() {
@@ -57,16 +60,16 @@ $(document).ready(function() {
 		$userInfo.append(txt1, txt2, txt3);
 	};
 
-	FB.getLoginStatus(function(response) {
-		statusChangeCallback(response);
-	});
+	// FB.getLoginStatus(function(response) {
+	// 	statusChangeCallback(response);
+	// });
 
 	// Get the modal
 	var modal = document.getElementById('id01');
 	var logOutBtn = document.getElementById('LogoutBtn');
 	// const $userInfo = $('.UserInfo');
 	// var userInfo = document.getElementsByClassName('UserInfo');
-	const $userInfo = $('#UserInfo');
+
 
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
