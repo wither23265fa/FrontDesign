@@ -6,15 +6,18 @@
   <meta name="author" content="wither">
   <title>FacebookLogin</title>
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/script.js"></script>
+  <script type="text/javascript" src="./js/jQuery.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
 </head>
+
 
 <body>
   <div id="fb-root"></div>
   <h2>Facebook</h2>
-
   <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <div id="UserInfo">
 
+  </div>
   <div id="id01" class="modal">
 
     <form class="modal-content animate" action="/action_page.php">
@@ -33,7 +36,9 @@
         <button type="submit">Login</button>
         <input type="checkbox" checked="checked"> Remember me
       </div>
-      <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="false" data-use-continue-as="true"></div>
+      <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="false" data-use-continue-as="true">
+        content
+      </div>
 
       <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
