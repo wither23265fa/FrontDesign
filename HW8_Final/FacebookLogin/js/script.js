@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	window.fbAsyncInit = function() {
 		FB.init({
       appId      : '1966131870300579',
@@ -54,14 +55,6 @@ $(document).ready(function() {
 		$userInfo.append(txt1, tx2, tx3);
 	};
 
-
-
-
-	// FB.getLoginStatus(function(response) {
-	// 	statusChangeCallback(response);
-	// 	console.log(response.status);
-	// });
-
 	// Get the modal
 	var modal = document.getElementById('id01');
 
@@ -75,15 +68,5 @@ $(document).ready(function() {
 			modal.style.display = "none";
 		}
 	};
-	//
-	// FB.getLoginStatus(function(response) {
-	// 	statusChangeCallback(response);
-	//
-	// 	if (response.status == 'connected') { // 登入成功
 
-	// 	} else {
-	// 		var txt2 = $("<p></p>").text("none");
-	// 		$userInfo.append("none");
-	// 	}
-	// });
 });
