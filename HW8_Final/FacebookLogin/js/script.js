@@ -16,7 +16,7 @@ window.fbAsyncInit = function() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-$(document).ready(function() {
+// $(document).ready(function() {
 // Get the modal
 var modal = document.getElementById('id01');
 
@@ -51,4 +51,4 @@ FB.getLoginStatus(function(response) {
 		}
 });
 
-});
+// });
