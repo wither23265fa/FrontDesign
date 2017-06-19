@@ -74,7 +74,7 @@ $(document).ready(function() {
 			console.log("ready to logout");
 			FB.logout();
 			console.log("already to logout");
-			console.log(response.status);
+			// console.log(response.status);
 			logOutBtn.style.display = "none";
 		}else if (event.target == modal) {
 			modal.style.display = "none";
