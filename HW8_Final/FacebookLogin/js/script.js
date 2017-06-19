@@ -1,5 +1,8 @@
 // FB tester
 const $userInfo = $('#UserInfo');
+var loginBtn = document.getElementById('LoginBtn');
+var logOutBtn = document.getElementById('LogoutBtn');
+var FBreponse;
 
 $(document).ready(function() {
 
@@ -14,8 +17,20 @@ $(document).ready(function() {
 		FB.AppEvents.logPageView();
 
 		FB.getLoginStatus(function(response) {
+			FBreponse = response;
     	statusChangeCallback(response);
   	});
+
+
+		logOutBtn.onclick = function () {
+			// FB
+			FB.logout(function (FBreponse) {
+				loginBtn.style.display = "block";
+				console.log("already to logout");
+			})
+		};
+
+
 	};
 
 	(function(d, s, id) {
@@ -40,8 +55,8 @@ $(document).ready(function() {
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       printInfo(response);
-			document.getElementsByClassName('cancelbtn').style.display = "none";
-			document.getElementsByClassName('')
+			// document.getElementsByClassName('cancelbtn').style.display = "none";
+			loginBtn.style.display = "none";
 
     } else {
       // The person is not logged into your app or we are unable to tell.
@@ -60,16 +75,8 @@ $(document).ready(function() {
 		$userInfo.append(txt1, txt2, txt3);
 	};
 
-	// FB.getLoginStatus(function(response) {
-	// 	statusChangeCallback(response);
-	// });
-
 	// Get the modal
 	var modal = document.getElementById('id01');
-	var logOutBtn = document.getElementById('LogoutBtn');
-	// const $userInfo = $('.UserInfo');
-	// var userInfo = document.getElementsByClassName('UserInfo');
-
 
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
@@ -78,9 +85,5 @@ $(document).ready(function() {
 		}
 	};
 
-	logOutBtn.onclick = function () {
-		// FB
-		console.log("ready to logout");
-	};
 
 });
