@@ -71,14 +71,13 @@ $(document).ready(function() {
 	window.onclick = function(event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
+		}else if (event.target == logOutBtn) {
+			console.log("ready to logout");
+			FB.logout();
+			console.log("already to logout");
+			console.log(response.status);
+			logOutBtn.style.display = "none";
 		}
-	};
-
-	logOutBtn.onclick = function(response) {
-		console.log("ready to logout");
-		FB.logout();
-		console.log("already to logout");
-		console.log(response.status);
 	};
 
 
