@@ -1,7 +1,7 @@
 // FB tester
 const $userInfo = $('#UserInfo');
 var loginBtn = document.getElementById('LoginBtn');
-var logOutBtn = document.getElementById('LogoutBtn');
+
 
 $(document).ready(function() {
 
@@ -66,17 +66,18 @@ $(document).ready(function() {
 
 	// Get the modal
 	var modal = document.getElementById('id01');
-
+	var logOutBtn = document.getElementById('LogoutBtn');
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}else if (event.target == logOutBtn) {
+
+		if (event.target == logOutBtn) {
 			console.log("ready to logout");
 			FB.logout();
 			console.log("already to logout");
 			console.log(response.status);
 			logOutBtn.style.display = "none";
+		}else if (event.target == modal) {
+			modal.style.display = "none";
 		}
 	};
 
